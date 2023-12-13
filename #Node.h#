@@ -1,0 +1,63 @@
+#ifndef NODE_H
+#define NODE_H
+#include <iostream>
+#include <cstring>
+#include "student.h"
+using namespace std;
+
+class Node{
+ public:
+  Node(); //default constructor
+  Node(student*); //modified constructor
+  ~Node(); //destructor
+  
+  //getters and setters
+  void setNext(Node* newnext);
+  Node/*
+OAOAOAAuthor: Vikram Vasudevan
+OAOAOADate: 12/8/2023
+Description: This program is meant to provide a means of creating a linked list. It includes functions that will set the next node, as well as get the next node and the information inside of it.
+In the main file there is a test which proves that the program works. 
+OAOAOA
+*/
+#include <iostream>
+#include <cstring>
+#include "node.h"
+#include "student.h"
+
+using namespace std;
+
+//testing to show that all functions work
+
+//main
+OAOAOAint main(){
+OAOAOA    //creating students
+    student* firstStudent = new student();
+OAOAOA    student* secondStudent = new student();
+
+OAOAOA    //setting ids for students.
+OAOAOA    firstStudent->setId(3);
+    secondStudent->setId(4);
+OAOAOA    //creating nodes.
+    node* head = new node(firstStudent);
+    node* nextNode = new node(secondStudent);
+    //setting nextNode as the next node of head
+    head->setNext(nextNode);
+    //printing out the id of head's student, and head's next node's student. This should print out a 3, followed by a 4.
+    cout << head->getStudent()->getId() << endl;
+    cout << head->getNext()->getStudent()->getId() << endl;
+
+OAOAOA
+ 
+OAOAOA
+OAOAOA
+OAOAOA}
+* getNext();
+  void setStudent(student* newstudent);
+  student* getStudent();
+
+  //things that are stored in the node
+  student* student;
+  Node* next;
+};
+#endif
