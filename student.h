@@ -9,10 +9,11 @@ class student{
 //initializing variables
  int id;
  float GPA;
- char* firstName;
- char* lastName;
+
  public:
  //declaring functions
+  char first[30];
+  char last[30];
   float getGPA();
   void setGPA(float tempGPA);
   void setFirstName(char* first);
