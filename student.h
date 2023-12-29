@@ -16,10 +16,6 @@ class student{
   char last[30];
   float getGPA();
   void setGPA(float tempGPA);
-  void setFirstName(char* first);
-  void setLastName(char* last);
-  char* getFirstName();
-  char* getLastName();
   int getId();
   void setId(int tempId);
 

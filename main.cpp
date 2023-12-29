@@ -39,8 +39,6 @@ int main(){
       cout << "What is the student's GPA? " << endl;
       cin >> GPA;
       cin.get();
-      if(head != NULL){
-      }
       add(head, head, head, id, GPA, first, last);
 
     }
@@ -60,7 +58,6 @@ int main(){
       cin.get();
       remove(head, head, head, deleteID);
     }
-  
   }
   return 0;
 }
@@ -74,9 +71,7 @@ void add(Node* &head, Node* current, Node* prev, int Id, float GPA, char first[3
   
   strcpy(newstudent->last, last);
   newstudent->setGPA(GPA);
-  if(current != NULL){
-    cout << current->getStudent()->first << endl;
-  }
+
   if(head == NULL){
     head = new Node();
     head->setStudent(newstudent);
@@ -144,10 +139,14 @@ void display(Node* current){
   return;
 
 }
-
 void average(Node* current, int counter, float sum){
   if(current == NULL){
-    cout << "The average of all the students' GPAs is " << fixed << setprecision(2) << (sum/counter) << endl;
+    if(counter == 0){
+      cout << "There are no students in the list" << endl;
+    }
+    else{
+      cout << "The average of all the students' GPAs is " << fixed << setprecision(2) << (sum/counter) << endl;
+    }
     return;
   }
   else{
