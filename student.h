@@ -11,7 +11,7 @@ class student{
  float GPA;
 
  public:
- //declaring functions
+ //declaring functions and variables.
   char first[30];
   char last[30];
   float getGPA();

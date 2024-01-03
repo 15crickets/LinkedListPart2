@@ -13,9 +13,11 @@ void student::setId(int tempId){
 int student::getId(){
     return id;
 }
+//function that sets the GPA of the student.
 void student::setGPA(float tempGPA){
     GPA = tempGPA;
 }
+//functon that gets the GPA of the student
 float student::getGPA(){
     return GPA;
 }
